@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+    <style>
+        body {background-color:black;font-style:normal; font-size: 70px; color:whitesmoke; }
+
+    </style>
+    <head>
+        director
+    </head>
+
+    <body align="center";>
+
+        <h5>
+            <strong>search the director</strong>
+        </h5>
+        <div class="search">
+            <input type="text" placeholder="감독 이름을 입력해 주세요.">
+       </div>
+       <div class="button">
+            <button>검색</button>
+       </div>
+
+        <div class="scroll-image">
+            <img alt="" src="http://image.cine21.com/resize/cine21/person/2018/0525/18_10_54__5b07d31e37c0d[W578-].jpg" />
+            <img alt="" src="http://topclass.chosun.com/news_img/2005/2005_088.jpg" />
+            <img alt="" src="http://image.cine21.com/resize/IMGDB/people/2002/0430/medium/160851_pl635[W578-].jpg" />
+          </div>
+          
+    </body>
+    <style>
+        .scroll-image {
+            display:flex;
+            flex-wrap:wrap;
+            align-items:flex-start;
+            margin:50px 0;
+        }
+        .scroll-image img {
+            width:calc(33.333% - 10px);
+            margin:0 15px 15px 0;
+        }
+        .scroll-image img:nth-of-type(3n),
+        .scroll-image img:last-child {
+            margin-right:0;
+        }
+        @media screen and (max-width:500px){
+          .scroll-image {
+            flex-wrap:nowrap;
+            justify-content:flex-start;
+            position:relative;
+            width:120%;
+            left:-7%;
+            padding:0 7%;
+            overflow-y:hidden;
+            overflow-x:auto;
+            -ms-overflow-style:none;
+            -webkit-overflow-scrolling:touch;
+          }
+          .scroll-image img {
+            display:block;
+            flex:0 0 auto;
+            width:100%;
+            margin:0 15px 0 0;
+          }
+          .scroll-image img:last-of-type{
+            margin-right:0;
+          }
+          .scroll-image:after {
+            content:'';
+            display:block;
+            flex:0 0 auto;
+            align-self:stretch;
+            width:7%;
+          }
+        }
+        </style>
+      
+
+</html>
